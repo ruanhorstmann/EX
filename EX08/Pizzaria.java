@@ -9,9 +9,9 @@ public class Pizzaria {
         Scanner scanner = new Scanner(System.in);
 
         // Menu de pizzas disponíveis
-        Pizza pizza1 = new Pizza("Calabresa", 25.0, criarIngredientes("Molho de tomate", "Calabresa", "Cebola", "Queijo"));
-        Pizza pizza2 = new Pizza("Margherita", 28.0, criarIngredientes("Molho de tomate", "Mussarela", "Manjericão"));
-        Pizza pizza3 = new Pizza("Quatro Queijos", 30.0, criarIngredientes("Molho de tomate", "Mussarela", "Provolone", "Parmesão", "Gorgonzola"));
+        Pizza pizza1 = new Pizza("Calabresa", 25.0f, criarIngredientes("Molho de tomate", "Calabresa", "Cebola", "Queijo"));
+        Pizza pizza2 = new Pizza("Margherita", 28.0f, criarIngredientes("Molho de tomate", "Mussarela", "Manjericão"));
+        Pizza pizza3 = new Pizza("Quatro Queijos", 30.0f, criarIngredientes("Molho de tomate", "Mussarela", "Provolone", "Parmesão", "Gorgonzola"));
 
         // Criando um pedido
         Pedido pedido = new Pedido();
@@ -44,16 +44,16 @@ public class Pizzaria {
             }
         }
 
-        // Solicitando o endereço de entrega
+        
         System.out.println("Informe o endereço de entrega:");
-        scanner.nextLine(); // Consumir a quebra de linha pendente
+        scanner.nextLine(); 
         String endereco = scanner.nextLine();
         pedido.setEnderecoEntrega(endereco);
 
-        // Imprimindo detalhes do pedido
+        
         pedido.imprimirDetalhes();
 
-        // Cancelando o pedido (opcional)
+        
         System.out.println("Deseja cancelar o pedido? (S/N)");
         String resposta = scanner.nextLine();
         if (resposta.equalsIgnoreCase("S")) {
@@ -63,7 +63,7 @@ public class Pizzaria {
         scanner.close();
     }
 
-    // Método para criar uma lista de ingredientes
+    
     private static List<String> criarIngredientes(String... ingredientes) {
         List<String> listaIngredientes = new ArrayList<>();
         for (String ingrediente : ingredientes) {

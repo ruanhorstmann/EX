@@ -5,10 +5,10 @@ import java.util.List;
 
 class Pizza {
     private String nome;
-    private double valor;
+    private float valor;
     private List<String> ingredientes;
 
-    public Pizza(String nome, double valor, List<String> ingredientes) {
+    public Pizza(String nome, float valor, List<String> ingredientes) {
         this.nome = nome;
         this.valor = valor;
         this.ingredientes = ingredientes;
